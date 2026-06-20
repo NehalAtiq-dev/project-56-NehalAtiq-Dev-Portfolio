@@ -1,5 +1,5 @@
 
-        /* Custom Scrollbar */
+        /* Custom Scrollbar - Reduced for performance */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -11,16 +11,17 @@
             border-radius: 4px;
         }
         
-        /* Glassmorphism Utilities */
+        /* Glassmorphism Utilities - Optimized with will-change */
         .glass {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            will-change: transform;
         }
         
-        /* Gradient Text */
+        /* Gradient Text - Optimized animation */
         .text-gradient {
             background: linear-gradient(to right, #6366f1, #ec4899, #8b5cf6);
             -webkit-background-clip: text;
@@ -28,6 +29,7 @@
             background-clip: text;
             background-size: 200% auto;
             animation: gradientMove 5s linear infinite;
+            will-change: background-position;
         }
 
         @keyframes gradientMove {
@@ -36,20 +38,22 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Background Grid Animation */
+        /* Background Grid Animation - Hardware accelerated */
         .bg-grid-pattern {
             background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
             background-size: 40px 40px;
             opacity: 0.2;
+            will-change: transform;
         }
         
 
-        /* Button Click & Hover Effect */
+        /* Button Click & Hover Effect - GPU accelerated */
         .btn-professional {
             position: relative;
             overflow: hidden;
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             z-index: 1;
+            will-change: transform;
         }
         .btn-professional::before {
             content: '';
@@ -73,9 +77,10 @@
             transform: scale(0.95);
         }
 
-        /* Service Card Hover */
+        /* Service Card Hover - Hardware accelerated transforms */
         .service-card {
             transition: all 0.4s ease;
+            will-change: transform;
         }
         .service-card:hover {
             transform: translateY(-10px) scale(1.02);
@@ -99,6 +104,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 9999px;
+            will-change: width;
         }
         .skill-bar-fill::after {
             content: '';
@@ -137,4 +143,24 @@
         @keyframes fadeInUp {
             from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Performance: Reduce motion for users who prefer it */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+
+        /* Performance: Optimize animations for blob elements */
+        .animate-blob {
+            will-change: transform;
+        }
+
+        /* Performance: Optimize float animation */
+        .animate-float {
+            will-change: transform;
         }

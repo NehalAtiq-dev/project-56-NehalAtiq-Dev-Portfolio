@@ -4,12 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nehal Atiq | Frontend Developer</title>
+    <meta name="description" content="Professional Frontend Developer portfolio - Crafting high-performance, visually stunning websites with clean code and modern design principles.">
+    
+    <!-- Preconnect to external domains for faster resource loading -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap">
+    <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- FontAwesome - Async loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -174,8 +187,12 @@
     <div class="relative w-[320px] h-[320px] md:w-[450px] md:h-[450px] rounded-full p-1.5 bg-gradient-to-br from-white/20 to-transparent shadow-2xl overflow-hidden animate-float">
         
         <div class="relative  w-full h-full rounded-full overflow-hidden border-2 border-white/10 glass">
-            <img src="WhatsApp Image 2026-03-28 at 11.57.44 PM.jpeg" 
+            <img src="hero-optimized.jpg" 
                  alt="Nehal Atiq" 
+                 loading="lazy"
+                 decoding="async"
+                 width="450"
+                 height="450"
                  class="w-full h-full object-cover transform scale-105 group-hover:scale-110 group-hover:rotate-2 transition-transform duration-700 ease-out">
             
             <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60"></div>
@@ -413,27 +430,27 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="portfolio-grid">
             
             <div class="group h-64 bg-slate-800 rounded-xl flex items-center justify-center overflow-hidden border border-white/10">
-                <img src="85d84762-3ece-4f53-9b05-54a3e0d90ebf.png" alt="Project 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <img src="project1-optimized.jpg" alt="Project 1" loading="lazy" decoding="async" width="800" height="600" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
 
             <div class="group h-64 bg-slate-800 rounded-xl flex items-center justify-center overflow-hidden border border-white/10">
-                <img src="99590628-806f-45a5-a60e-70732d99b99b.jpg" alt="Project 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <img src="project2-optimized.jpg" alt="Project 2" loading="lazy" decoding="async" width="800" height="600" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
 
             <div class="group h-64 bg-slate-800 rounded-xl flex items-center justify-center overflow-hidden border border-white/10">
-                <img src="1.jpg" alt="Project 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <img src="project3-optimized.jpg" alt="Project 3" loading="lazy" decoding="async" width="800" height="600" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
 
             <div class="group h-64 bg-slate-800 rounded-xl flex items-center justify-center overflow-hidden border border-white/10">
-                <img src="2.jpg" alt="Project 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <img src="project4-optimized.jpg" alt="Project 4" loading="lazy" decoding="async" width="800" height="600" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
 
             <div class="group h-64 bg-slate-800 rounded-xl flex items-center justify-center overflow-hidden border border-white/10">
-                <img src="99590628-806f-45a5-a60e-70732d99b99b.jpg" alt="Project 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <img src="project2-optimized.jpg" alt="Project 5" loading="lazy" decoding="async" width="800" height="600" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
 
             <div class="group h-64 bg-slate-800 rounded-xl flex items-center justify-center overflow-hidden border border-white/10">
-                <img src="85d84762-3ece-4f53-9b05-54a3e0d90ebf.png" alt="Project 6" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                <img src="project1-optimized.jpg" alt="Project 6" loading="lazy" decoding="async" width="800" height="600" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
             </div>
 
         </div> </div>
@@ -526,8 +543,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="add.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="add.js" defer></script>
 </body>
 </html>
 
